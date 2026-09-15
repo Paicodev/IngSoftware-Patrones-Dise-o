@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ar.edu.unvm</groupId>
-    <artifactId>patrones-pizzeria</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>pizzeria-patrones</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
