@@ -1,0 +1,49 @@
+@startuml strategy_pattern
+
+title Diagrama de Clases - Patrón Strategy (Pizzería)
+
+class Pedido {
+    - id: String
+    - cliente: String
+    - precioTotal: double
+    + Pedido(id: String, cliente: String, precioTotal: double)
+    + getPrecioTotal(): double
+}
+
+interface EstrategiaEntrega {
+    + calcularCosto(pedido: Pedido): double
+}
+
+class EntregaRetiroLocal {
+    + calcularCosto(pedido: Pedido): double
+}
+
+class EntregaDelivery {
+    - recargoDelivery: double
+    + EntregaDelivery(recargoDelivery: double)
+    + calcularCosto(pedido: Pedido): double
+}
+
+class EntregaExpress {
+    - recargoExpress: double
+    + EntregaExpress(recargoExpress: double)
+    + calcularCosto(pedido: Pedido): double
+}
+
+class ServicioEntrega {
+    - estrategia: EstrategiaEntrega
+    + ServicioEntrega(estrategia: EstrategiaEntrega)
+    + setEstrategia(estrategia: EstrategiaEntrega): void
+    + calcularCostoFinal(pedido: Pedido): double
+}
+
+' Relaciones entre clases
+EstrategiaEntrega <|.. EntregaRetiroLocal : implementa
+EstrategiaEntrega <|.. EntregaDelivery : implementa
+EstrategiaEntrega <|.. EntregaExpress : implementa
+
+ServicioEntrega "1" o--> "1" EstrategiaEntrega : utiliza / compone
+ServicioEntrega ..> Pedido : usa
+EstrategiaEntrega ..> Pedido : usa
+
+@enduml
