@@ -1,6 +1,6 @@
 package ar.edu.patrones.strategy;
 
-import ar.edu.patrones.dominio.Pedido;
+import ar.edu.patrones.modelo.Pedido;
 
 import java.util.Objects;
 

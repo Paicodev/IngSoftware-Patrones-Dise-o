@@ -1,8 +1,8 @@
 package ar.edu.patrones.strategy;
 
-import ar.edu.patrones.dominio.EstadoPedido;
-import ar.edu.patrones.dominio.Pedido;
-import ar.edu.patrones.dominio.Pizza;
+import ar.edu.patrones.modelo.EstadoPedido;
+import ar.edu.patrones.modelo.Pedido;
+import ar.edu.patrones.modelo.Pizza;
 import ar.edu.patrones.strategy.estrategias.EntregaDelivery;
 import ar.edu.patrones.strategy.estrategias.EntregaRetiro;
 
@@ -15,7 +15,7 @@ public final class StrategyDemo {
 
     public static void main(String[] args) {
         Pedido pedido = new Pedido(
-                1,
+                "PED-103",
                 "Lucía",
                 List.of(new Pizza("Muzzarella", 8500.0), new Pizza("Especial", 9800.0)),
                 EstadoPedido.RECIBIDO

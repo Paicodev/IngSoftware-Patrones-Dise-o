@@ -7,6 +7,12 @@ public class Pizza {
     private double precio;
 
     public Pizza(String nombre, double precio) {
+       if (nombre.isBlank()) {
+            throw new IllegalArgumentException("El nombre de la pizza no puede estar vacío.");
+        }
+        if (precio < 0) {
+            throw new IllegalArgumentException("El precio de la pizza no puede ser negativo.");
+        }
         this.nombre = nombre;
         this.precio = precio;
     }
