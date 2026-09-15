@@ -1,5 +1,4 @@
-package ar.edu.pizzeria.modelo;
-
+package ar.edu.patrones.modelo;
 /**
  * Representa una pizza ofrecida en la pizzería.
  */

@@ -1,4 +1,4 @@
-package ar.edu.pizzeria.modelo;
+package ar.edu.patrones.modelo;
 
 /**
  * Estados posibles por los que transita un pedido en la pizzería.

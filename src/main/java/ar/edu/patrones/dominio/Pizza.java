@@ -1,5 +1,4 @@
-package ar.edu.unvm.patrones.dominio;
-
+package ar.edu.patrones.dominio;
 import java.util.Objects;
 
 /** Pizza del pedido, identificada por su nombre y precio unitario. */

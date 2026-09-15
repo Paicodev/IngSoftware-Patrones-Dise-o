@@ -1,7 +1,7 @@
-package ar.edu.pizzeria.observer;
+package ar.edu.patrones.observer;
 
-import ar.edu.pizzeria.modelo.EventoPedido;
-import ar.edu.pizzeria.modelo.Pedido;
+import ar.edu.patrones.modelo.EventoPedido;
+import ar.edu.patrones.modelo.Pedido;
 
 /**
  * Observador concreto encargado de notificar al cliente sobre el estado de su pedido.

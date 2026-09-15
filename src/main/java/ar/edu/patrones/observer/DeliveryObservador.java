@@ -1,8 +1,8 @@
-package ar.edu.pizzeria.observer;
+package ar.edu.patrones.observer;
 
-import ar.edu.pizzeria.modelo.EstadoPedido;
-import ar.edu.pizzeria.modelo.EventoPedido;
-import ar.edu.pizzeria.modelo.Pedido;
+import ar.edu.patrones.modelo.EstadoPedido;
+import ar.edu.patrones.modelo.EventoPedido;
+import ar.edu.patrones.modelo.Pedido;
 
 /**
  * Observador concreto que representa el área de despacho y logística / delivery.

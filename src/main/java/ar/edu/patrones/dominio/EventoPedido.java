@@ -1,5 +1,4 @@
-package ar.edu.unvm.patrones.dominio;
-
+package ar.edu.patrones.dominio;
 import java.util.Objects;
 
 /** Evento mínimo reservado para la posterior implementación de Observer. */

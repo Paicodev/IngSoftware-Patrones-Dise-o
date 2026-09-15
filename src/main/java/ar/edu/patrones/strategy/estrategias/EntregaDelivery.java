@@ -1,7 +1,7 @@
-package ar.edu.unvm.patrones.strategy.estrategias;
+package ar.edu.patrones.strategy.estrategias;
 
-import ar.edu.unvm.patrones.dominio.Pedido;
-import ar.edu.unvm.patrones.strategy.EstrategiaEntrega;
+import ar.edu.patrones.dominio.Pedido;
+import ar.edu.patrones.strategy.EstrategiaEntrega;
 
 import java.util.Objects;
 

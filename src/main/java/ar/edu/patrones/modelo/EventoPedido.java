@@ -1,5 +1,4 @@
-package ar.edu.pizzeria.modelo;
-
+package ar.edu.patrones.modelo;
 /**
  * Evento emitido cuando ocurre un cambio relevante en un pedido.
  */

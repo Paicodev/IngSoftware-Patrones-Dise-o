@@ -1,9 +1,9 @@
-package ar.edu.pizzeria.observer;
+package ar.edu.patrones.observer;
 
-import ar.edu.pizzeria.modelo.EstadoPedido;
-import ar.edu.pizzeria.modelo.EventoPedido;
-import ar.edu.pizzeria.modelo.Pedido;
-import ar.edu.pizzeria.modelo.Pizza;
+import ar.edu.patrones.modelo.EstadoPedido;
+import ar.edu.patrones.modelo.EventoPedido;
+import ar.edu.patrones.modelo.Pedido;
+import ar.edu.patrones.modelo.Pizza;
 
 import java.util.ArrayList;
 import java.util.List;

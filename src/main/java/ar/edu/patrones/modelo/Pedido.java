@@ -1,5 +1,4 @@
-package ar.edu.pizzeria.modelo;
-
+package ar.edu.patrones.modelo;
 import java.util.ArrayList;
 import java.util.List;
 

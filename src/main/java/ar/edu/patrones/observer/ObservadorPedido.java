@@ -1,6 +1,6 @@
-package ar.edu.pizzeria.observer;
+package ar.edu.patrones.observer;
 
-import ar.edu.pizzeria.modelo.EventoPedido;
+import ar.edu.patrones.modelo.EventoPedido;
 
 /**
  * Interfaz para los observadores interesados en recibir actualizaciones sobre pedidos.

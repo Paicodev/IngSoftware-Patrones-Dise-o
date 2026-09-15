@@ -1,10 +1,10 @@
-package ar.edu.unvm.patrones.strategy;
+package ar.edu.patrones.strategy;
 
-import ar.edu.unvm.patrones.dominio.EstadoPedido;
-import ar.edu.unvm.patrones.dominio.Pedido;
-import ar.edu.unvm.patrones.dominio.Pizza;
-import ar.edu.unvm.patrones.strategy.estrategias.EntregaDelivery;
-import ar.edu.unvm.patrones.strategy.estrategias.EntregaRetiro;
+import ar.edu.patrones.dominio.EstadoPedido;
+import ar.edu.patrones.dominio.Pedido;
+import ar.edu.patrones.dominio.Pizza;
+import ar.edu.patrones.strategy.estrategias.EntregaDelivery;
+import ar.edu.patrones.strategy.estrategias.EntregaRetiro;
 
 import java.util.List;
 
