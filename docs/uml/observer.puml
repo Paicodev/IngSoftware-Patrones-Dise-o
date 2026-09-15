@@ -1,0 +1,76 @@
+@startuml Observer_Pizzeria
+
+title Patrón Observer - Sistema de notificación de pedidos (Pizzería)
+
+' ===== Modelo de dominio mínimo (compartido por el equipo) =====
+class Pedido {
+    - id: String
+    - cliente: String
+    - pizzas: List<Pizza>
+    - estado: EstadoPedido
+    + getEstado(): EstadoPedido
+    + setEstado(estado: EstadoPedido): void
+}
+
+class Pizza {
+    - nombre: String
+    - precio: double
+}
+
+enum EstadoPedido {
+    RECIBIDO
+    EN_PREPARACION
+    LISTO
+    ENTREGADO
+}
+
+class EventoPedido {
+    - tipo: String
+    - pedido: Pedido
+    + getPedido(): Pedido
+    + getTipo(): String
+}
+
+' ===== Roles del patrón Observer =====
+
+' --- Subject (Observable) ---
+class GestorPedidos {
+    - observadores: List<ObservadorPedido>
+    + agregarObservador(o: ObservadorPedido): void
+    + quitarObservador(o: ObservadorPedido): void
+    + notificar(evento: EventoPedido): void
+    + cambiarEstado(pedido: Pedido, nuevoEstado: EstadoPedido): void
+}
+
+' --- Observer (interfaz, contrato del equipo) ---
+interface ObservadorPedido {
+    + actualizar(evento: EventoPedido): void
+}
+
+' --- Concrete Observers ---
+class CocinaObservador {
+    + actualizar(evento: EventoPedido): void
+}
+
+class NotificacionClienteObservador {
+    + actualizar(evento: EventoPedido): void
+}
+
+class DeliveryObservador {
+    + actualizar(evento: EventoPedido): void
+}
+
+' ===== Relaciones =====
+ObservadorPedido <|.. CocinaObservador
+ObservadorPedido <|.. NotificacionClienteObservador
+ObservadorPedido <|.. DeliveryObservador
+
+GestorPedidos "1" o-- "*" ObservadorPedido : notifica >
+GestorPedidos ..> EventoPedido : crea/usa
+GestorPedidos --> Pedido : gestiona
+
+EventoPedido --> Pedido : referencia
+Pedido "1" *-- "*" Pizza
+Pedido --> EstadoPedido
+
+@enduml
