@@ -1,0 +1,34 @@
+@startuml singleton
+
+title Patrón Singleton - ConfiguracionPizzeria
+
+class ConfiguracionPizzeria {
+  {static} -INSTANCIA : ConfiguracionPizzeria
+  -nombrePizzeria : String
+  -tiempoPreparacionMinutos : int
+  --
+  -ConfiguracionPizzeria()
+  {static} +getInstance() : ConfiguracionPizzeria
+  +getNombrePizzeria() : String
+  +getTiempoPreparacionMinutos() : int
+}
+
+note right of ConfiguracionPizzeria::INSTANCIA
+  Única instancia de la clase,
+  creada de forma estática (eager
+  initialization) al cargar la clase.
+end note
+
+note left of ConfiguracionPizzeria::ConfiguracionPizzeria
+  Constructor privado: impide que
+  otras clases usen "new" para
+  crear instancias.
+end note
+
+class SingletonDemo {
+  {static} +main(args : String[]) : void
+}
+
+SingletonDemo ..> ConfiguracionPizzeria : usa\n(getInstance())
+
+@enduml
